@@ -1,5 +1,5 @@
 import {Page} from "playwright/test";
-import {inputFormSubmit} from "../locator/inputFormSubmitLocators";
+import {inputFormSubmitLocators} from "../locator/inputFormSubmitLocators";
 
 export class InputFormSubmitPage{
     private readonly page: Page
@@ -8,9 +8,7 @@ export class InputFormSubmitPage{
     }
 
     async clickOnInputFormSubmitLink(){
-        await this.page.locator(inputFormSubmit.inputFormSubmitLink).click();
+        await this.page.locator(inputFormSubmitLocators.inputFormSubmitLink).click();
         console.log("Clicked on Input Form Submit Link");
-        await this.page.locator(inputFormSubmit.submitButton).click();
-        console.log("Clicked on Submit Button");
     }
 }
